@@ -27,13 +27,24 @@
     <meta property="twitter:image" content="/images/og-image.jpg" />
 
     <!-- Theme Color -->
-    <meta name="theme-color" content="#059669" />
+    <meta name="theme-color" content="#0A0B0D" />
 
     <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script type="module" crossorigin src="/portfolio/assets/index-C9ARAdwl.js"></script>
-    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-WZwDqX5f.css">
+
+    <!-- Apply the stored theme before first paint (dark unless the visitor chose light) -->
+    <script>
+      try {
+        if (localStorage.getItem('portfolio-theme') !== 'light') {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
+    <script type="module" crossorigin src="/portfolio/assets/index-BcJh63ym.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-DCJvwyh5.css">
   </head>
   <body>
     <div id="root"></div>
